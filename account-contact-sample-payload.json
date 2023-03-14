@@ -1,0 +1,63 @@
+{
+  "graphs":[
+    {
+      "graphId":"1",
+      "compositeRequest":[
+        {
+          "method":"PATCH",
+          "url":"/services/data/v57.0/sobjects/Account/KvK_Number__c/34567890",
+          "referenceId":"account",
+          "body":{
+            "Name":"Jayme Inc"
+          }
+        },
+        {
+          "method":"PATCH",
+          "url":"/services/data/v57.0/sobjects/Contact/Email/jayme.asuka@ja.com",
+          "referenceId":"contact",
+          "body":{
+            "FirstName":"Jayme",
+            "LastName":"Asuka",
+            "AccountId":"@{account.id}"
+          }
+        }
+      ]
+    },
+    {
+      "graphId":"2",
+      "compositeRequest":[
+        {
+          "method":"PATCH",
+          "url":"/services/data/v57.0/sobjects/Account/KvK_Number__c/45678901",
+          "referenceId":"account",
+          "body":{
+            "Name":"Gabi Inc"
+          }
+        },
+        {
+          "method":"PATCH",
+          "url":"/services/data/v57.0/sobjects/Contact/Email/gabi.rini@gr.com",
+          "referenceId":"contact",
+          "body":{
+            "FirstName":"Gabi",
+            "LastName":"Rini",
+            "AccountId":"@{account.id}"
+          }
+        }
+      ]
+    },
+    {
+      "graphId":"3",
+      "compositeRequest":[
+        {
+          "method":"PATCH",
+          "url":"/services/data/v57.0/sobjects/Account/KvK_Number__c/56789012",
+          "referenceId":"account",
+          "body":{
+            "Name":"Floor Inc"
+          }
+        }
+      ]
+    }
+  ]
+}
