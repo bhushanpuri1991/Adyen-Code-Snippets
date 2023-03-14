@@ -1,0 +1,23 @@
+[
+  {
+    "Contact_First_Name__c":"Jayme",
+    "Contact_Last_Name__c":"Asuka",
+    "Email__c":"jayme.asuka@ja.com",
+    "Company_Name__c":"Jayme Inc",
+    "Company_KvK_Number__c":"34567890"
+    },
+  {
+    "Contact_First_Name__c":"Gabi",
+    "Contact_Last_Name__c":"Asuka",
+    "Email__c":"gabi.rini@gr.com",
+    "Company_Name__c":"Jayme Inc",
+    "Company_KvK_Number__c":"34567890"
+  },
+  {
+    "Contact_First_Name__c":"Arno",
+    "Contact_Last_Name__c":"Taj",
+    "Email__c":"arno.taj@at.com",
+    "Company_Name__c":"Floor Inc",
+    "Company_KvK_Number__c":"56789012"
+  }
+]
