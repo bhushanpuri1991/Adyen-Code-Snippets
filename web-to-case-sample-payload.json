@@ -1,0 +1,44 @@
+{
+   "allOrNone":true,
+   "compositeRequest":[
+      {
+         "method":"GET",
+         "referenceId":"case_record_type",
+         "url":"/services/data/v57.0/query?q=SELECT+Id+FROM+RecordType+WHERE+DeveloperName+=+'Sales'+AND+IsActive+=+TRUE+AND+SobjectType+=+'Case'+LIMIT+1"
+      },
+      {
+         "method":"POST",
+         "url":"/services/data/v57.0/sobjects/Case/",
+         "referenceId":"case",
+         "body":{
+            "Origin":"Web",
+            "Subject":"Payment failed",
+            "RecordTypeId":"@{case_record_type.records[0].Id}"
+         }
+      },
+      {
+         "method":"POST",
+         "url":"/services/data/v57.0/sobjects/ContentVersion/",
+         "referenceId":"content_version",
+         "body":{
+            "Title":"Receipt",
+            "VersionData":"VGVzdCBGaWxl",
+            "PathOnClient":"Receipt.txt"
+         }
+      },
+      {
+         "method":"GET",
+         "referenceId":"content_version_get_id",
+         "url":"/services/data/v57.0/sobjects/ContentVersion/@{content_version.id}"
+      },
+      {
+         "method":"POST",
+         "url":"/services/data/v57.0/sobjects/ContentDocumentLink/",
+         "referenceId":"content_document_link_id",
+         "body":{
+            "ContentDocumentId":"@{content_version_get_id.ContentDocumentId}",
+            "LinkedEntityId":"@{case.id}"
+         }
+      }
+   ]
+}
