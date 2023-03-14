@@ -1,0 +1,23 @@
+[
+  {
+    "company_name":"Jayme Inc",
+    "kvk_number":"34567890",
+    "contacts":[
+      {
+        "contact_first_name":"Jayme",
+        "contact_last_name":"Asuka",
+        "email":"jayme.asuka@ja.com"
+      },
+      {
+        "contact_first_name":"Gabi",
+        "contact_last_name":"Rini",
+        "email":"gabi.rini@gr.com"
+      }
+    ],
+    "issue_summary":"Payment failed"
+  },
+  {
+    "company_name":"Floor Inc",
+    "kvk_number":"56789012"
+  }
+]
